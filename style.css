@@ -17,7 +17,7 @@
     grid-template-areas: 
       "card-title1 card-title2 card-title3"
       "card-input1 card-input2 card-input3"
-      " . card-buttons . ";
+      " card-button-cell ";
     justify-items: center;
     align-items: center;
 }
@@ -25,6 +25,29 @@
 .card-title1, .card-title2, .card-title3 {
     align-self: end;
     color: #B9144F;
+}
+
+.card-input1, .card-input2, .card-input3 {
+    border: 1px solid #B9144F;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.card-button {
+    line-height: 30px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding: 0 5px;
+}
+
+.card-button:hover {
+    border-color: orange;
+}
+
+.card-button-cell {
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 .container-lg {
