@@ -6,18 +6,17 @@
 }
 
 .container {
-    display: grid;
     max-width: 900px;
     margin: 25px auto;
     background-color: white;
     height: 200px;
-    border-radius: 10px;
+    border-radius: 10px;  
+}
+
+.container-grid-1 {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
-      "card-title1 card-title2 card-title3"
-      "card-input1 card-input2 card-input3"
-      " card-button-cell ";
     justify-items: center;
     align-items: center;
 }
@@ -52,9 +51,25 @@
 
 .container-lg {
     background-color: #B9144F;
+    height: 100vh;
 }
 
 .title {
     text-align: center;
     color: white;
+}
+
+.container-grid-2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.container-grid-2 .container-title {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    align-self: end;
+    justify-self: start;
 }
