@@ -60,7 +60,7 @@
 }
 
 .container-grid-2 {
-    display: grid;
+    display: grid;    
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 2fr;
     justify-items: center;
@@ -69,7 +69,7 @@
 
 .container-grid-2 .container-title {
     grid-column-start: 1;
-    grid-column-end: 8;
+    grid-column-end: 6;
     align-self: end;
     justify-self: start;
 }

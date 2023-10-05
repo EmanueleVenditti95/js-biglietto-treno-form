@@ -10,6 +10,10 @@ console.log(btnDOMElement)
 // - ricevere i dati inseriti dall'utente
 btnDOMElement.addEventListener('click', function () {
 
+    let userNameDomElement = document.getElementById('username')
+let username = userNameDomElement.value
+console.log(userNameDomElement)
+
 // - chiedere all'utente i km 
 //     - creare una variabile con i km inseriti dall'utente    
 let inputDomElement = document.getElementById ('km')
@@ -41,15 +45,26 @@ let discountSenior = price * 40 / 100
 if (age == 1){   
     //     - SE l'età dell'utente è < 18 anni, applicare lo sconto Junior
     price = price - discountJunior
+    let discountMessageDomElement = document.getElementById('discount')
+    discountMessageDomElement.innerHTML = 'Biglietto Junior'
     console.log(price)
 } else if (age == 2) {  
      //     - ALTRIMENTI SE l'età dell'utente è > 65 anni,applicare lo sconto Senior 
      price = price - discountSenior
+     let discountMessageDomElement = document.getElementById('discount')
+     discountMessageDomElement.innerHTML = 'Biglietto Senior'
      console.log(price)
+} else {
+    //     - ALTRIMENTI non applicare nessuno sconto
+    let discountMessageDomElement = document.getElementById('discount')
+    discountMessageDomElement.innerHTML = 'Biglietto Standard' 
 }
-//     - ALTRIMENTI non applicare nessuno sconto
 
 // - stampare il prezzo finale del biglietto
 let messageDomElement = document.getElementById('message')
-messageDomElement.innerHTML = '<h1>' + 'Il prezzo del tuo biglietto è :' + (price).toFixed(2) + ' &euro;<h1>'
+messageDomElement.innerHTML = '<p>' + (price).toFixed(2) + ' &euro;</p>'
+
+let userNameMessageDomElement = document.getElementById('user-name-message')
+userNameMessageDomElement.innerHTML = '<p>' + username + '</p>'
+
 }) 
