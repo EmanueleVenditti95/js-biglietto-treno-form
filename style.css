@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.container {
+    display: grid;
+    max-width: 900px;
+    margin: 25px auto;
+    background-color: white;
+    height: 200px;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "card-title1 card-title2 card-title3"
+      "card-input1 card-input2 card-input3"
+      " . card-buttons . ";
+    justify-items: center;
+    align-items: center;
+}
+
+.card-title1, .card-title2, .card-title3 {
+    align-self: end;
+    color: #B9144F;
+}
+
+.container-lg {
+    background-color: #B9144F;
+}
+
+.title {
+    text-align: center;
+    color: white;
+}

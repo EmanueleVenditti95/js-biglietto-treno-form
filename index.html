@@ -7,21 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container-lg">
+        <h1 class="title">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="container">
+            <h3 class="card-title1">Nome Cognome</h3>
+            <h3 class="card-title2">Km da percorrere</h3>
+            <h3 class="card-title3">Fascia d'età</h3>
+            <input class="card-input1" type="text" placeholder="Inserisci nome e cognome">
+            <input class="card-input2" type="text" name="km" id="km" placeholder="Inserisci i km del tragitto">
+            <select class="card-input3" name="age" id="age">
+                <option value="0">Intero</option>
+                <option value="1">Under 18</option>
+                <option value="2">Over 65</option>
+            </select>
+            <button class="card-button" id="btn-calc">Genera</button>
+        </div>
+
+
+        <h1 class="title">IL TUO BIGLIETTO</h1>
+        <div class="container">
+
+        </div>
+    </div>    
+    
     <div>
-        <input type="text" name="km" id="km" placeholder="Inserisci i km del tragitto">
-
-        <select name="age" id="age">
-            <option value="0">Intero</option>
-            <option value="1">Under 18</option>
-            <option value="2">Over 65</option>
-        </select>
-
-        <button id="btn-calc">Genera</button>
+        
     </div>
 
     <h1 id="message"></h1>
-
-
+    
     <script src="./app.js"></script>
 </body>
 </html>
